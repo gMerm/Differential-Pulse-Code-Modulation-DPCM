@@ -81,66 +81,77 @@ for i=1:x_length
     predicted_value = a'*memory;
 end
 
-% ----------------------- BULLET 2--------------------------- %
-% Plot x and y in the same figure for BULLET 2  (uncomment to execute)
-% p = 5 -> N = 1,2,3
-% p = 6 -> N = 1,2,3
-% plot the initial input signal t
-% plot the error prediction signal y 
+%------------------------------Question 2
+%plot x,y in the same figure
+%initial input signal t
+%error prediction signal y 
+%p = 5 -> N = 1,2,3
+%p = 6 -> N = 1,2,3
+
+%uncomment from here for question 2
+
 %plot(t) 
 %hold
 %plot(y) 
 %xlabel('Input signal x') 
 %ylabel('Error Prediction Signal y') 
 
-% ----------------------- BULLET 3--------------------------- %
-% BULLET 3 Median square error and values of a, then diagram of E  (uncomment to execute)
-% p = 5:10 -> N=1,2,3 (N values do not reflect on a!)
-% median square error
-% Initialize E values we gathered
-% by running code for p=5...10  and N=1..3
-% we store the MSE
+%uncomment till here for question 2
 
-E = mean(y.^2); 
-fprintf('Median Square Error (E): %f\n', E);
-N_values = [1 2 3];
+% -----------------------------Question 3
+%Median square error and values of a, then diagram of E
+%p = 5:10 -> N=1,2,3
+%Gather the E values for one by one p firstly by running code
+%for p=5:1:10 and N=1:1:3
 
-E_p5 = [7.4862 4.6948 3.4948];
-E_p6 = [7.4008 4.6464 3.4945];
-E_p7 = [5.3527 3.4288 2.4718];
-E_p8 = [4.6890 2.8736 2.1051];
-E_p9 = [4.8479 2.8717 2.0766];
-E_p10 = [4.5177 2.6438 1.9343];
+%uncomment from here for question 3
+
+%E = mean(y.^2); 
+%fprintf('Median Square Error (E): %f\n', E);
+%N_values = [1 2 3];
+
+%E_p5 = [7.4862 4.6948 3.4948];
+%E_p6 = [7.4008 4.6464 3.4945];
+%E_p7 = [5.3527 3.4288 2.4718];
+%E_p8 = [4.6890 2.8736 2.1051];
+%E_p9 = [4.8479 2.8717 2.0766];
+%E_p10 = [4.5177 2.6438 1.9343];
 
 %plot error for each p
-hold on;
-plot1 = plot(N_values,E_p5);
-plot2 = plot(N_values,E_p6);
-plot3 = plot(N_values,E_p7);
-plot4 = plot(N_values,E_p8);
-plot5 = plot(N_values,E_p9);
-plot6 = plot(N_values,E_p10);
-set(plot1,'Marker','square');
-set(plot2,'Marker','square');
-set(plot3,'Marker','square');
-set(plot4,'Marker','square');
-set(plot5,'Marker','square');
-set(plot6,'Marker','square');
-hold off;
-xlabel('N') 
-ylabel('E(Y^2)') 
-legend('E(Y^2) for p=5','E(Y^2) for p=6','E(Y^2) for p=7','E(Y^2) for p=8','E(Y^2) for p=9', 'E(Y^2) for p=10')
+%hold on;
+%plot1 = plot(N_values,E_p5);
+%plot2 = plot(N_values,E_p6);
+%plot3 = plot(N_values,E_p7);
+%plot4 = plot(N_values,E_p8);
+%plot5 = plot(N_values,E_p9);
+%plot6 = plot(N_values,E_p10);
+%set(plot1,'Marker','square');
+%set(plot2,'Marker','square');
+%set(plot3,'Marker','square');
+%set(plot4,'Marker','square');
+%set(plot5,'Marker','square');
+%set(plot6,'Marker','square');
+%hold off;
+%xlabel('N') 
+%ylabel('E(Y^2)') 
+%legend('E(Y^2) for p=5','E(Y^2) for p=6','E(Y^2) for p=7','E(Y^2) for p=8','E(Y^2) for p=9', 'E(Y^2) for p=10')
 
-% ----------------------- BULLET 4--------------------------- %
-% Plot x and y_out in the same figure for BULLET 4 (uncomment to execute)
-% p = 5 -> N = 1,2,3
-% p = 10 -> N = 1,2,3
-% plot the first 200 elements of input signal x
-% plot the first 200 elements of the decoding output y_out
+%uncomment till here for question 3
+
+% -----------------------------Question 4
+%Plot x and y_out in the same figure
+%p = 5 -> N = 1,2,3
+%p = 10 -> N = 1,2,3
+%plot the first 200 elements of input signal x
+%plot the first 200 elements of the decoding output y_out
+
+%uncomment from here for question 4
+
 %plot (t(1:200))     
 %hold
 %plot (y_out(1:200)) 
 %xlabel('Input signal x') 
 %ylabel('Decoded Output Signal y') 
 
+%uncomment till here for question 4
 end
